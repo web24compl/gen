@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Footer;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,14 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $footers = Footer::all();
+
+        return view('home',['footers' => $footers]);
+    }
+    
+    public function generate($id){
+        $footer = Footer::find($id);
+
+        return view('footer', ['footer'=>$footer]);
     }
 }
