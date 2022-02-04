@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Footer;
+use App\Models\Employee;
 
 class HomeController extends Controller
 {
@@ -17,21 +17,11 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index()
     {
-        $footers = Footer::all();
+        $employees = Employee::all();
 
-        return view('home',['footers' => $footers]);
+        return view('home', ['employees'=>$employees]);
     }
     
-    public function generate($id){
-        $footer = Footer::find($id);
-
-        return view('footer', ['footer'=>$footer]);
-    }
 }

@@ -1,25 +1,25 @@
 <body style="color: #000; width: fit-content; line-height: 1.5">
   <div style="border-bottom: 1px solid #ccc; padding: 10px">
-      <a href="https://procer.com.pl" target="_blank"><img width="200px" src="https://procer.com.pl/storage/email/procer/logo.png" alt="procer-group-logo"/></a>
+      <a href="https://mag.pl" target="_blank"><img width="200px" src="../images/mag_logo.png" alt="mag-logo"/></a>
   </div>
   <table style="margin-top: 10px; font-size: 12px">
       <tr>
           <td style="padding: 5px 10px; vertical-align: top">
               <div style="margin-top: 0; margin-bottom: auto">
-                  <h3 style="margin-top: 0; display: inline">{{$footer->name}}</h3><br>
-                  <h4 style="display: inline; color: lightskyblue;">{{$footer->position}}</h2><br>
-                  {{$footer->phone}}<br>
-                  <a style="color: #000; text-decoration: none;" href="mailto:{{$footer->email}}">{{$footer->email}}</a>
+                  <h3 style="margin-top: 0; display: inline">{{$employee->name}}</h3><br>
+                  <h4 style="display: inline; color: blue;">{{$employee->position}}</h2><br>
+                  {{$employee->phone}}<br>
+                  <a style="color: #000; text-decoration: none;" href="mailto:{{$employee->email}}">{{$employee->email}}</a>
               </div>
           </td>
           <td rowspan="2" style="padding: 5px 10px; border-left: 1px solid #ccc">
-              PROCER Sp. z o.o.
-              <br>81-521 Gdynia
-              <br>Al. Zwycięstwa 241/13
-              <br>NIP: 589-204-60-65
+              Morska Agencja Gdynia Sp. z o.o.
+              <br>81-341 Gdynia
+              <br>Ul T. Wendy 15
+              <br>NIP: 586-015-78-96
               <br>
-              <br>+48 583 555 888
-              <br><a style="color: #000; text-decoration: none;" href="mailto:biuro@procer.com.pl">biuro@procer.com.pl</a>
+              <br>+48 58 785 37 85
+              <br><a style="color: #000; text-decoration: none;" href="mailto:mag@mag.pl">mag@mag.pl</a>
           </td>
       </tr>
       <tr>

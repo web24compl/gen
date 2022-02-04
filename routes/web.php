@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\GeneratorController;
+use App\Http\Controllers\EmployeeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,8 +15,12 @@ use App\Http\Controllers\GeneratorController;
 */
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/home', [HomeController::class, 'index']);
 
-Route::get('/footer/{id}', [App\Http\Controllers\HomeController::class, 'generate'])->name('home');
+Route::get('/footer/{id}', [HomeController::class, 'generate']);
+
+Route::get('/employee', [HomeController::class, 'create']);
+
+Route::get('/edit/{id}', [HomeController::class, 'edit']);
 

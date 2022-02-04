@@ -26,20 +26,19 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     Generator
                 </a>
-                @guest
-                @else
-                    <div>
-
-                    </div>
-                @endguest
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
+                    <ul class="navbar-nav me-auto ">
+                        <li class='nav-item'>
+                            <a href='/add' class='nav-link'>Dodaj Pracownika</a>
+                        </li>
+                        <li class='nav-item'>
+                            <a href='/config' class='nav-link'>Konfigurator</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

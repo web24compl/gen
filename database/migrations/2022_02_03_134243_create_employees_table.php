@@ -4,32 +4,25 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFootersTable extends Migration
+class CreateemployeesTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
+    public function up():void
     {
-        Schema::create('footers', function (Blueprint $table) {
+        Schema::create('employees', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('position');
+            $table->string('company');
+            $table->string('mobile');
             $table->string('phone');
             $table->string('email');
+
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
+    public function down():void
     {
-        Schema::dropIfExists('footers');
+        Schema::dropIfExists('employees');
     }
 }
