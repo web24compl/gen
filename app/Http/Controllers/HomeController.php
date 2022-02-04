@@ -7,11 +7,6 @@ use App\Models\Employee;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         $this->middleware('auth');
@@ -21,7 +16,6 @@ class HomeController extends Controller
     {
         $employees = Employee::all();
 
-        return view('home', ['employees'=>$employees]);
+        return view('home', ['employees' => $employees]);
     }
-    
 }

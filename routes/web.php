@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\FooterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,14 +14,12 @@ use App\Http\Controllers\EmployeeController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Auth::routes();
 
-Route::get('/', [HomeController::class, 'index']);
-Route::get('/home', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/footer/{id}', [HomeController::class, 'generate']);
+Route::get('/footer/{id}', [FooterController::class, 'show']);
+Route::get('/config', [FooterController::class, 'config']);
 
-Route::get('/employee', [HomeController::class, 'create']);
-
-Route::get('/edit/{id}', [HomeController::class, 'edit']);
-
+Route::resource('employees', EmployeeController::class)->except(['show', 'index']);

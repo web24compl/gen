@@ -14,6 +14,9 @@
                         </div>
                     @endif
                     <div>
+                        <a href='/employees/create'>
+                          <button class='btn btn-primary mb-3'>Dodaj Pracownika</button>  
+                        </a>
                         <h3>Lista pracowników</h3>
                         <table class="table">
                             <thead>
@@ -47,7 +50,7 @@
                                       </a>
                                     </td>    
                                     <td>
-                                      <a href="/edit/{{$employee->id}}">                                      
+                                      <a href="/employees/{{$employee->id}}/edit">                                      
                                         <button class='btn btn-secondary'>
                                           Edit
                                         </button>

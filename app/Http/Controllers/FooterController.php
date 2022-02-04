@@ -7,10 +7,15 @@ use App\Models\Employee;
 
 class FooterController extends Controller
 {
-    public function create($id){
-        
+    public function show($id)
+    {
         $employee = Employee::find($id);
 
-        return view('footer', ['employee'=>$employee]);
+        return view('footer', ['employee' => $employee]);
+    }
+
+    public function config()
+    {
+        return view('konfigurator');
     }
 }

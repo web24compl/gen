@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\EmployeeResource;
 use App\Http\Requests\EmployeeRequest;
@@ -17,42 +18,33 @@ class EmployeeController extends Controller
 
     public function create()
     {
-        return view('form');
+        return view('form', ['employee' => null]);
     }
 
     public function store(EmployeeRequest $request)
     {
         $employee = Employee::create($request->validated());
 
-        return new EmployeeResource($employee);
-    }
-
-    public function show(Employee $employee)
-    {
-        return new EmployeeResource($employee);
+        return redirect()->route('home');
     }
 
     public function edit($id)
     {
         $employee = Employee::find($id);
-      
-        return view('form', ['employee'=>$employee]);
+
+        return view('form', ['employee' => $employee]);
     }
-    
+
     public function update(EmployeeRequest $request, Employee $employee)
     {
         $employee->update($request->validated());
-        
-        return new EmployeeResource($employee);
+
+        return redirect()->route('home');
     }
 
     public function destroy(Employee $employee)
     {
         $employee->delete();
-        
-        return response()->noContent();
+        return redirect()->route('home');
     }
-    
-    
-
 }

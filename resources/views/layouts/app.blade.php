@@ -33,12 +33,18 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto ">
-                        <li class='nav-item'>
-                            <a href='/add' class='nav-link'>Dodaj Pracownika</a>
-                        </li>
-                        <li class='nav-item'>
-                            <a href='/config' class='nav-link'>Konfigurator</a>
-                        </li>
+                        @guest
+                        @else
+                            <li class='nav-item'>
+                                <a href='/' class='nav-link'>Pracownicy</a>
+                            </li>
+                            <li class='nav-item'>
+                                <a href='/employees/create' class='nav-link'>Dodaj Pracownika</a>
+                            </li>
+                            <li class='nav-item'>
+                                <a href='/config' class='nav-link'>Konfigurator Stopek</a>
+                            </li>
+                        @endguest
                     </ul>
 
                     <!-- Right Side Of Navbar -->
