@@ -35,7 +35,7 @@
                             <tbody>                
                             @foreach ($employees as $employee)
                                 <tr>
-                                    <td>{{$employee->id}}</td>
+                                    <td>{{$loop->iteration}}</td>
                                     <td>{{$employee->name}}</td>
                                     <td>{{$employee->position}}</td>
                                     <td>{{$employee->company}}</td>   
@@ -52,9 +52,16 @@
                                     <td>
                                       <a href="/employees/{{$employee->id}}/edit">                                      
                                         <button class='btn btn-secondary'>
-                                          Edit
+                                          Edytuj
                                         </button>
                                       </a>
+                                      <form action="/employees/{{$employee->id}}" method="POST">
+                                        @csrf
+                                        @method('delete')                                      
+                                        <button class='btn btn-danger'>
+                                          X
+                                        </button>
+                                      </form>
                                     </td>    
                                 </tr>                            
                             @endforeach

@@ -19,12 +19,10 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                      <form action="{{route(isset($employees) ? 'employees.patch' : 'employees.store')}}" >
+                      <form method="POST" action="{{isset($employee) ? route('employees.update',['employee'=>$employee->id]) : route('employees.store')}}">
                       @csrf
                       @isset($employee)
                           @method('patch')
-                          @else
-                          @method('post')
                       @endisset
                         <div class="form-group">
                           <label for="name">Imie i Nazwisko</label>

@@ -31,4 +31,5 @@
           </td>
       </tr>
   </table>
+  {{$employee}}
 </body>

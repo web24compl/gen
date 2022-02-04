@@ -23,7 +23,7 @@ class EmployeeController extends Controller
 
     public function store(EmployeeRequest $request)
     {
-        $employee = Employee::create($request->validated());
+        Employee::create($request->validated());
 
         return redirect()->route('home');
     }
