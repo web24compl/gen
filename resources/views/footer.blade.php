@@ -1,35 +1,51 @@
-<body style="color: #000; width: fit-content; line-height: 1.5">
-  <div style="border-bottom: 1px solid #ccc; padding: 10px">
-      <a href="https://mag.pl" target="_blank"><img width="200px" src="" alt="mag-logo"/></a>
-  </div>
-  <table style="margin-top: 10px; font-size: 12px">
-      <tr>
-          <td style="padding: 5px 10px; vertical-align: top">
-              <div style="margin-top: 0; margin-bottom: auto">
-                  <h3 style="margin-top: 0; display: inline">{{$employee->name}}</h3><br>
-                      <h4 style="display: inline; color: blue;">{{$employee->position}}</h2><br>
-                  {{$employee->phone}}<br>
-                  <a style="color: #000; text-decoration: none;" href="mailto:{{$employee->email}}">{{$employee->email}}</a>
-              </div>
-          </td>
-          <td rowspan="2" style="padding: 5px 10px; border-left: 1px solid #ccc">
-              Morska Agencja Gdynia Sp. z o.o.
-              <br>81-341 Gdynia
-              <br>Ul T. Wendy 15
-              <br>NIP: 586-015-78-96
-              <br>
-              <br>+48 58 785 37 85
-              <br><a style="color: #000; text-decoration: none;" href="mailto:mag@mag.pl">mag@mag.pl</a>
-          </td>
-      </tr>
-      <tr>
-          <td style="vertical-align: bottom">
-              <div style="margin-left: 10px">
-                  <a href="" target="_blank"><img src="https://procer.com.pl/storage/email/procer/facebook.png" alt="procer-facebook"></a>
-                  <a style="margin-left: 10px" href="" target="_blank"><img src="https://procer.com.pl/storage/email/procer/instagram.png" alt="procer-instagram"></a>
-              </div>
-          </td>
-      </tr>
-  </table>
-  {{$employee}}
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+</head>
+<body style="color: #000; width: fit-content;padding:20px;">
+    <div><a href="http://mag.pl"><img src="{{url('/images/mag_logo.png')}}" width="200px"/></a></div>
+    <div style="display: flex;flex-direction:column;margin-left:20px">
+        <h3 style="margin-bottom:0">{{$employee->name}}</h3>
+        <p>{{$employee->position}}</p>
+        <p>&#9679; {{$employee->department}}</p>
+    </div>
+    <div style="display: flex;flex-direction:column;margin:10px 0 0 20px">
+        <p><span>MOB:</span> {{$employee->mobile}}</p>
+        <a href='mailto:{{$employee->email}}'><span>MAIL:</span> {{$employee->email}}</a>
+    </div>
+    {{-- <div style="display: flex;flex-direction:column;margin:10px 0 0 20px">
+        <p>{{$company->company}}</p>
+        <p><span>UL:</span>{{$company->address}}, {{$company->post_code}}</p>
+        <p><span>TEL:</span>{{$company->phone}}, <span>FAX:</span>{{$company->fax}}</p>
+    </div> --}}
+    <div style="display: flex;flex-direction:column;margin:50px 0 0 20px">
+        <p>Morska Agencja Gdynia Sp. z o.o.</p>
+        <p><span>UL.</span>Tadeusza Wendy 15, 81-341 Gdynia</p>
+        <p><span>TEL:</span> +48 58 785 37 40, <span>FAX:</span> +48 58 62 78 124</p>
+    </div>
+    
 </body>
+<style>
+    *{
+        font-family: 'nunito';
+        text-decoration: none
+    }
+    p{
+        color: gray;
+        margin: 0;
+        line-height: 1;
+    }
+    a{
+        color: gray;
+        margin: 0;
+        line-height: 1;
+
+    }
+    span{
+        color: rgb(4, 4, 187);
+        font-weight: 700;
+    }
+    h3{
+        color: rgb(4, 4, 187);
+        line-height: 1.5;
+    }
+</style>

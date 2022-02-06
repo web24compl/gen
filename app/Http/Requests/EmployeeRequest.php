@@ -15,10 +15,10 @@ class EmployeeRequest extends FormRequest
     {
         return [
             'name' =>['required'],
-            'position' =>['required'],
             'company' =>['required'],
+            'position' =>['required'],
+            'department' =>['required'],
             'mobile' =>['required'],
-            'phone' =>['required'],
             'email' =>['required', 'email'],            
         ];
     }
