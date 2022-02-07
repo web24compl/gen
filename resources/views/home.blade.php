@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-lg-10">
             <div class="card">
                 <div class="card-header">Pracownicy</div>
 
@@ -23,13 +23,13 @@
                               <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Imie i Nazwisko</th>
-                                <th scope="col">Stanowisko</th>
                                 <th scope="col">Firma</th>
-                                <th scope="col">Mob</th>
-                                <th scope="col">Tel</th>
+                                <th scope="col">Stanowisko</th>
+                                <th scope="col">Wydział</th>
+                                <th scope="col">Mobile</th>
                                 <th scope="col">E-Mail</th>
-                                <th scope="col">===</th>
-                                <th scope="col">===</th>
+                                <th scope="col">=====</th>
+                                <th scope="col">=====</th>
                               </tr>
                             </thead>   
                             <tbody>                
@@ -37,10 +37,10 @@
                                 <tr>
                                     <td>{{$loop->iteration}}</td>
                                     <td>{{$employee->name}}</td>
-                                    <td>{{$employee->position}}</td>
                                     <td>{{$employee->company}}</td>   
+                                    <td>{{$employee->position}}</td>
+                                    <td>{{$employee->department}}</td>   
                                     <td>{{$employee->mobile}}</td>   
-                                    <td>{{$employee->phone}}</td>   
                                     <td>{{$employee->email}}</td>   
                                     <td>
                                       <a target="_blank" href="/footer/{{$employee->id}}">                                      

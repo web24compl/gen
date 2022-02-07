@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CompanyController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EmployeeController;
@@ -23,3 +24,4 @@ Route::get('/footer/{id}', [FooterController::class, 'show']);
 Route::get('/config', [FooterController::class, 'config']);
 
 Route::resource('employees', EmployeeController::class)->except(['show', 'index']);
+Route::resource('companies', CompanyController::class)->except(['show', 'index']);

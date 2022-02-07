@@ -29,20 +29,20 @@
                           <input class="form-control" id="name" name='name' value="{{$employee?->name}}">
                         </div>
                         <div class="form-group">
-                          <label for="position">Stanowisko</label>
-                          <input class="form-control" id="position" name='position' value="{{$employee?->position}}">
-                        </div>
-                        <div class="form-group">
                           <label for="company">Firma</label>
                           <input class="form-control" id="company" name='company' value="{{$employee?->company}}">
                         </div>
                         <div class="form-group">
-                          <label for="mobile">Mobile</label>
-                          <input class="form-control" id="mobile" name='mobile' value="{{$employee?->mobile}}">
+                          <label for="position">Stanowisko</label>
+                          <input class="form-control" id="position" name='position' value="{{$employee?->position}}">
                         </div>
                         <div class="form-group">
-                          <label for="phone">Telefon</label>
-                          <input type="phone" class="form-control" name='phone' id="phone" value="{{$employee?->phone}}">
+                          <label for="department">Wydział</label>
+                          <input class="form-control" id="department" name='department' value="{{$employee?->department}}">
+                        </div>
+                        <div class="form-group">
+                          <label for="mobile">Mobile</label>
+                          <input class="form-control" id="mobile" name='mobile' value="{{$employee?->mobile}}">
                         </div>
                         <div class="form-group">
                           <label for="email">E-Mail</label>

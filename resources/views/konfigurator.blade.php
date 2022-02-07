@@ -16,35 +16,35 @@
                     <form method="POST">
                     @csrf
                       <div class="form-group">
-                        <label for="nip">NIP</label>
-                        <input class="form-control" id="nip" name='nip'>
+                        <label for="company">Nazwa Firmy</label>
+                        <input class="form-control" id="company" name='company'>
                       </div>
                       <div class="form-group">
-                        <label for="position">Adres</label>
-                        <input class="form-control" id="position" name='position' >
+                        <label for="address">Adres</label>
+                        <input class="form-control" id="address" name='address' >
                       </div>
                       <div class="form-group">
                         <label for="post_code">Kod Pocztowy</label>
-                        <input class="form-control" id="post_code" name='post_code'>
+                        <input class="form-control" id="post_code" name='post_code' placeholder="XX-XXX Miasto">
                       </div>
                       <div class="form-group">
                         <label for="phone">Telefon</label>
                         <input class="form-control" id="phone" name='phone'>
                       </div>
                       <div class="form-group">
-                        <label for="fax">fax</label>
-                        <input class="form-control" name='fax' id="fax" >
+                        <label for="fax">Fax</label>
+                        <input class="form-control" name='fax' id="fax">
                       </div>
                       <div class="form-group">
-                        <label for="email">E-Mail</label>
-                        <input class="form-control" type='email' id="email" name='email'>
+                        <label for="vat_no">VAT No</label>
+                        <textarea class="form-control" id="vat_no" name='vat_no'></textarea>
+                      </div>
+                      <div class="form-group">
+                        <label for="www">WWW</label>
+                        <input class="form-control" id="www" name='www'>
                       </div>
                       <button type="submit" class="btn btn-primary mt-4">
-                        @isset($employee)
-                            Edytuj
-                            @else
-                            Dodaj    
-                        @endisset
+                        Dodaj
                       </button>
                   </form>
                     
