@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\EmployeeResource;
 use App\Http\Requests\EmployeeRequest;
+use App\Models\Company;
 use App\Models\Employee;
 use Illuminate\Http\Request;
 
@@ -18,7 +19,9 @@ class EmployeeController extends Controller
 
     public function create()
     {
-        return view('form', ['employee' => null]);
+        $companies = Company::all();
+
+        return view('form', ['employee' => null, 'companies'=>$companies]);
     }
 
     public function store(EmployeeRequest $request)
@@ -32,7 +35,9 @@ class EmployeeController extends Controller
     {
         $employee = Employee::find($id);
 
-        return view('form', ['employee' => $employee]);
+        $companies = Company::all();
+
+        return view('form', ['employee' => $employee, 'companies'=>$companies]);
     }
 
     public function update(EmployeeRequest $request, Employee $employee)

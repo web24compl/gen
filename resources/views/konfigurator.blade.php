@@ -13,35 +13,38 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <form method="POST">
+                  <form method="POST" action="{{isset($company) ? route('companies.update',['company'=>$company->id]) : route('companies.store')}}">
                     @csrf
+                    @isset($company)
+                    @method('patch')
+                    @endisset
                       <div class="form-group">
                         <label for="company">Nazwa Firmy</label>
-                        <input class="form-control" id="company" name='company'>
+                        <input class="form-control" id="company" name='company' value="{{$company?->company}}">
                       </div>
                       <div class="form-group">
                         <label for="address">Adres</label>
-                        <input class="form-control" id="address" name='address' >
+                        <input class="form-control" id="address" name='address'  value="{{$company?->address}}">
                       </div>
                       <div class="form-group">
                         <label for="post_code">Kod Pocztowy</label>
-                        <input class="form-control" id="post_code" name='post_code' placeholder="XX-XXX Miasto">
+                        <input class="form-control" id="post_code" name='post_code' placeholder="XX-XXX Miasto" value="{{$company?->post_code}}">
                       </div>
                       <div class="form-group">
                         <label for="phone">Telefon</label>
-                        <input class="form-control" id="phone" name='phone'>
+                        <input class="form-control" id="phone" name='phone' value="{{$company?->phone}}">
                       </div>
                       <div class="form-group">
                         <label for="fax">Fax</label>
-                        <input class="form-control" name='fax' id="fax">
+                        <input class="form-control" name='fax' id="fax" value="{{$company?->fax}}">
                       </div>
                       <div class="form-group">
                         <label for="vat_no">VAT No</label>
-                        <textarea class="form-control" id="vat_no" name='vat_no'></textarea>
+                        <input class="form-control" id="vat_no" name='vat_no' value="{{$company?->vat_no}}"></input>
                       </div>
                       <div class="form-group">
                         <label for="www">WWW</label>
-                        <input class="form-control" id="www" name='www'>
+                        <input class="form-control" id="www" name='www' value="{{$company?->www}}">
                       </div>
                       <button type="submit" class="btn btn-primary mt-4">
                         Dodaj

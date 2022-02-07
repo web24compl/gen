@@ -11,20 +11,22 @@ class CompanyController extends Controller
 {
     public function index()
     {
-        return Company::all();   
+        $companies = Company::all();
+
+        return view('firmy', ['companies'=>$companies]);   
     }
     
-    public function config()
+    public function create()
     {
         
-        return view('config', ['company' => null]);
+        return view('konfigurator', ['company' => null]);
     }
 
     public function store(CompanyRequest $request)
     {
         Company::create($request->validated());
 
-        return redirect()->route('home');
+        return redirect()->route('companies.index');
     }
 
     public function edit($id)
@@ -38,12 +40,12 @@ class CompanyController extends Controller
     {
         $company->update($request->validated());
 
-        return redirect()->route('home');
+        return redirect()->route('companies.index');
     }
 
     public function destroy(Company $company)
     {
         $company->delete();
-        return redirect()->route('home');
+        return redirect()->route('companies.index');
     }
 }

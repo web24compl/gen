@@ -30,7 +30,12 @@
                         </div>
                         <div class="form-group">
                           <label for="company">Firma</label>
-                          <input class="form-control" id="company" name='company' value="{{$employee?->company}}">
+                          <select name="company" id="company" class='form-select'>
+                            @foreach ($companies as $company)
+                                <option value='{{$company->company}}'>{{$company->company}}</option>
+                            @endforeach
+                          </select>
+                          {{-- <input class="form-control" id="company" name='company' value="{{$employee?->company}}"> --}}
                         </div>
                         <div class="form-group">
                           <label for="position">Stanowisko</label>

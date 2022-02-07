@@ -42,7 +42,10 @@
                                 <a href='/employees/create' class='nav-link'>Dodaj Pracownika</a>
                             </li>
                             <li class='nav-item'>
-                                <a href='/config' class='nav-link'>Konfigurator Stopek</a>
+                                <a href='/companies' class='nav-link'>Firmy</a>
+                            </li>
+                            <li class='nav-item'>
+                                <a href='/companies/create' class='nav-link'>Dodaj Firmę</a>
                             </li>
                         @endguest
                     </ul>

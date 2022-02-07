@@ -43,7 +43,7 @@
                                     <td>{{$employee->mobile}}</td>   
                                     <td>{{$employee->email}}</td>   
                                     <td>
-                                      <a target="_blank" href="/footer/{{$employee->id}}">                                      
+                                      <a href="/footer/{{$employee->id}}" target="_blank"> {{--  download='stopka'--}}                              
                                         <button class='btn btn-secondary'>
                                           HTML
                                         </button>
@@ -59,7 +59,7 @@
                                         @csrf
                                         @method('delete')                                      
                                         <button class='btn btn-danger'>
-                                          X
+                                          Usuń
                                         </button>
                                       </form>
                                     </td>    

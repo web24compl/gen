@@ -8,9 +8,9 @@ class CreateCompanyTable extends Migration
 {
     public function up():void
     {
-        Schema::create('company', function (Blueprint $table) {
+        Schema::create('companies', function (Blueprint $table) {
             $table->id();
-            $table->string('company');
+            $table->string('company')->nullable(false);
             $table->string('address');
             $table->string('post_code');
             $table->string('phone');
@@ -24,6 +24,6 @@ class CreateCompanyTable extends Migration
 
     public function down():void
     {
-        Schema::dropIfExists('company');
+        Schema::dropIfExists('companies');
     }
 }
