@@ -45,7 +45,7 @@
                           <form action="/companies/{{$company->id}}" method="POST">
                             @csrf
                             @method('delete')                                      
-                            <button class='btn btn-danger'>
+                            <button class='btn btn-danger' onclick="if(!confirm('czy chcesz usunąć')){event.preventDefault()}">
                               Usuń
                             </button>
                           </form>

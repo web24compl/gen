@@ -11,16 +11,16 @@ class CreateemployeesTable extends Migration
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('company')->nullable(false);
+            $table->string('company')->unique();
             $table->string('position');
             $table->string('department');
             $table->string('mobile');
             $table->string('email');
             $table->timestamps();
-            // $table->foreign('company')
-            //     ->references('company')
-            //     ->on('companies')
-            //     ->onDelete('cascade');
+            $table->foreign('company')
+                ->references('company')
+                ->on('companies')
+                ->onDelete('cascade');
         });
     }
 

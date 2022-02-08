@@ -5,7 +5,13 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Konfigurator</div>
+                <div class="card-header">
+                  @isset($employee)
+                      Edytuj
+                      @else
+                      Dodaj  
+                  @endisset
+                </div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -40,7 +46,7 @@
                       </div>
                       <div class="form-group">
                         <label for="vat_no">VAT No</label>
-                        <input class="form-control" id="vat_no" name='vat_no' value="{{$company?->vat_no}}"></input>
+                        <input class="form-control" id="vat_no" name='vat_no' value="{{$company?->vat_no}}">
                       </div>
                       <div class="form-group">
                         <label for="www">WWW</label>

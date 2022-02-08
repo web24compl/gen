@@ -1,11 +1,11 @@
 <head><style>
     @font-face{
-        font-family: 'EncodeSans'
-        src:url({{url('/fonts/EncodeSans.ttf')}})
+        font-family: 'EncodeSans';
+        src:url('/fonts/EncodeSans.ttf');
     }
     *{
-        font-family: 'EncodeSans';
-        text-decoration: none
+        font-family: 'EncodeSans',-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+        text-decoration: none;
     }
     p{
         color: gray;
@@ -51,6 +51,6 @@
     </div>
     <div style="display: flex;flex-direction:column;text-align:center;">
         <img src="{{url('/images/ship-01.svg')}}" width="400px" height="375px">
-        <a href="{{$company->www}}" target="_blank" style="color: rgb(34, 34, 173);">{{$company->www}}</a>    
+        <a href="https://{{$company->www}}" target="_blank" style="color: rgb(34, 34, 173);">{{$company->www}}</a>    
     </div>
 </body>
