@@ -20,7 +20,8 @@ Auth::routes();
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/footer/{id}', [FooterController::class, 'show']);
+Route::get('/footer/{id}', [FooterController::class, 'show'])->name('footer.show');
+Route::get('/image/{id}', [FooterController::class, 'image'])->name('footer.image');
 
 Route::resource('employees', EmployeeController::class)->except(['show', 'index']);
 Route::resource('companies', CompanyController::class)->except(['show']);

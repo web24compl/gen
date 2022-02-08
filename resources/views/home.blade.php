@@ -43,9 +43,14 @@
                                     <td>{{$employee->mobile}}</td>   
                                     <td>{{$employee->email}}</td>   
                                     <td>
-                                      <a href="/footer/{{$employee->id}}" target="_blank"> {{--  download='stopka'--}}                              
+                                      <a href="/footer/{{$employee->id}}" download='stopka {{$employee->name}}'>                            
                                         <button class='btn btn-secondary'>
                                           HTML
+                                        </button>
+                                      </a>
+                                      <a href="/image/{{$employee->id}}">                               
+                                        <button class='btn btn-secondary'>
+                                          PNG
                                         </button>
                                       </a>
                                     </td>    
@@ -58,7 +63,7 @@
                                       <form action="/employees/{{$employee->id}}" method="POST">
                                         @csrf
                                         @method('delete')                                      
-                                        <button class='btn btn-danger'>
+                                        <button class='btn btn-danger' onclick="if(!confirm('czy chcesz usunąć')){event.preventDefault()}">
                                           Usuń
                                         </button>
                                       </form>
@@ -72,8 +77,5 @@
             </div>
         </div>
     </div>
-    <script>
-
-    </script>
 </div>
 @endsection
