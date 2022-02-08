@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Firmy</div>
+                <div class="card-header">{{__("Companies")}}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -15,18 +15,18 @@
                     @endif
                                
                     <a href='/companies/create'>
-                      <button class='btn btn-primary mb-3'>Dodaj Firme</button>  
+                      <button class='btn btn-primary mb-3'>{{__("Add Company")}}</button>  
                     </a>
-                    <h3>Lista firm</h3>
+                    <h3>{{__("List Of Companies")}}</h3>
                     <table class="table">
                         <thead>
                           <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Nazwa</th>
-                            <th scope="col">Telefon</th>
-                            <th scope="col">Adres</th>
-                            <th scope="col">WWW</th>
-                            <th scope="col">=====</th>
+                            <th scope="col">{{__("Company")}}</th>
+                            <th scope="col">{{__("Phone")}}</th>
+                            <th scope="col">{{__("Address")}}</th>
+                            <th scope="col">{{__("WWW")}}</th>
+                            <th scope="col"></th>
                           </tr>
                         </thead>    
                     @foreach ($companies as $company)
@@ -38,15 +38,15 @@
                         <td>{{$company->www}}</td>      
                         <td>
                           <a href="/companies/{{$company->id}}/edit">                                      
-                            <button class='btn btn-secondary'>
-                              Edytuj
+                            <button class='btn btn-sm btn-secondary'>
+                              {{__("Edit")}}
                             </button>
                           </a>
                           <form action="/companies/{{$company->id}}" method="POST">
                             @csrf
                             @method('delete')                                      
-                            <button class='btn btn-danger' onclick="if(!confirm('czy chcesz usunąć')){event.preventDefault()}">
-                              Usuń
+                            <button class='btn btn-sm btn-danger' onclick="if(!confirm('czy chcesz usunąć')){event.preventDefault()}">
+                              {{__("Delete")}}
                             </button>
                           </form>
                         </td>    

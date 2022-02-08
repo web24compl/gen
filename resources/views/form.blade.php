@@ -7,9 +7,9 @@
             <div class="card">
                 <div class="card-header">
                   @isset($employee)
-                      Edytuj
-                      @else
-                      Dodaj    
+                    {{__("Edit")}}
+                  @else
+                    {{__("Add")}}
                   @endisset
                 </div>
 
@@ -25,11 +25,11 @@
                           @method('patch')
                       @endisset
                         <div class="form-group">
-                          <label for="name">Imie i Nazwisko</label>
+                          <label for="name">{{__("Name")}}</label>
                           <input class="form-control" id="name" name='name' value="{{$employee?->name}}">
                         </div>
                         <div class="form-group">
-                          <label for="company">Firma</label>
+                          <label for="company">{{__("Company")}}</label>
                           <select name="company" id="company" class='form-select'>
                             @foreach ($companies as $company)
                                 <option value='{{$company->company}}'>{{$company->company}}</option>
@@ -37,26 +37,26 @@
                           </select>
                         </div>
                         <div class="form-group">
-                          <label for="position">Stanowisko</label>
+                          <label for="position">{{__("Position")}}</label>
                           <input class="form-control" id="position" name='position' value="{{$employee?->position}}">
                         </div>
                         <div class="form-group">
-                          <label for="department">Wydział</label>
+                          <label for="department">{{__("Department")}}</label>
                           <input class="form-control" id="department" name='department' value="{{$employee?->department}}">
                         </div>
                         <div class="form-group">
-                          <label for="mobile">Mobile</label>
+                          <label for="mobile">{{__("Mobile")}}</label>
                           <input type="tel" class="form-control" id="mobile" name='mobile' value="{{$employee?->mobile}}">
                         </div>
                         <div class="form-group">
-                          <label for="email">E-Mail</label>
+                          <label for="email">{{__("Email")}}</label>
                           <input class="form-control" type='email' id="email" name='email' value="{{$employee?->email}}">
                         </div>
                         <button type="submit" class="btn btn-primary mt-4">
                           @isset($employee)
-                              Edytuj
-                              @else
-                              Dodaj    
+                            {{__("Edit")}}
+                            @else
+                            {{__("Add")}}
                           @endisset
                         </button>
                     </form>

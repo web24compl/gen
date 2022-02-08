@@ -22,14 +22,14 @@
                             <thead>
                               <tr>
                                 <th scope="col">#</th>
-                                <th scope="col">Imie i Nazwisko</th>
-                                <th scope="col">Firma</th>
-                                <th scope="col">Stanowisko</th>
-                                <th scope="col">Wydział</th>
-                                <th scope="col">Mobile</th>
-                                <th scope="col">E-Mail</th>
-                                <th scope="col">=====</th>
-                                <th scope="col">=====</th>
+                                <th scope="col">{{__("Name")}}</th>
+                                <th scope="col">{{__("Company")}}</th>
+                                <th scope="col">{{__("Position")}}</th>
+                                <th scope="col">{{__("Department")}}</th>
+                                <th scope="col">{{__("Mobile")}}</th>
+                                <th scope="col">{{__("Email")}}</th>
+                                <th scope="col"></th>
+                                <th scope="col"></th>
                               </tr>
                             </thead>   
                             <tbody>                
@@ -44,27 +44,27 @@
                                     <td>{{$employee->email}}</td>   
                                     <td>
                                       <a href="/footer/{{$employee->id}}" download='stopka {{$employee->name}}'>                            
-                                        <button class='btn btn-secondary'>
+                                        <button class='btn btn-sm btn-secondary'>
                                           HTML
                                         </button>
                                       </a>
                                       <a href="/image/{{$employee->id}}">                               
-                                        <button class='btn btn-secondary'>
+                                        <button class='btn btn-sm btn-secondary'>
                                           PNG
                                         </button>
                                       </a>
                                     </td>    
                                     <td>
                                       <a href="/employees/{{$employee->id}}/edit">                                      
-                                        <button class='btn btn-secondary'>
-                                          Edytuj
+                                        <button class='btn btn-sm btn-secondary'>
+                                          {{__("Edit")}}
                                         </button>
                                       </a>
                                       <form action="/employees/{{$employee->id}}" method="POST">
                                         @csrf
                                         @method('delete')                                      
-                                        <button class='btn btn-danger' onclick="if(!confirm('czy chcesz usunąć')){event.preventDefault()}">
-                                          Usuń
+                                        <button class='btn btn-sm btn-danger' onclick="if(!confirm('czy chcesz usunąć')){event.preventDefault()}">
+                                          {{__("Delete")}}
                                         </button>
                                       </form>
                                     </td>    

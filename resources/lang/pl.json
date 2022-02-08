@@ -1,0 +1,39 @@
+{
+  "Login": "Logowanie",
+  "Email Address": "Adres Email",
+  "Password":"Hasło",
+  "Remember Me":"Zapamiętaj mnie",
+  "Forgot Your Password?":"Zapomniałeś Hasła?",
+
+  "Employees":"Pracownicy",
+  "Add Employee":"Dodaj Pracownika",
+  "Companies":"Firmy",
+  "Add Companies":"Dodaj Firmy",
+
+  
+  "Name":"Imie i Nazwisko", 
+  "Company":"Firma", 
+  "Position":"Stanowisko", 
+  "Department":"Wydział", 
+  "Phone":"Telefon",
+  "Mobile":"Mobile", 
+  "Email":"Email",
+  
+  "Add":"Dodaj",  
+  "Edit":"Edytuj",
+  "Delete":"Usuń",
+
+  "Address":"Adres",
+  "Add Company":"Dodaj Firmę",
+  "List Of Companies":"Lista Firm",
+
+  "Company Name":"Nazwa Firmy",
+  "Street":"Ulica",
+  "Street Number":"Numer Ulicy",
+  "Post Code":"Kod Pocztowy",
+  "City":"Miejscowość",
+
+  "Fax":"Fax",
+  "NIP":"NIP",
+  "WWW":"WWW"
+}

@@ -36,16 +36,16 @@
                         @guest
                         @else
                             <li class='nav-item'>
-                                <a href='/' class='nav-link'>Pracownicy</a>
+                                <a href='/' class='nav-link'>{{__("Employees")}}</a>
                             </li>
                             <li class='nav-item'>
-                                <a href='/employees/create' class='nav-link'>Dodaj Pracownika</a>
+                                <a href='/employees/create' class='nav-link'>{{__("Add Employee")}}</a>
                             </li>
                             <li class='nav-item'>
-                                <a href='/companies' class='nav-link'>Firmy</a>
+                                <a href='/companies' class='nav-link'>{{__("Companies")}}</a>
                             </li>
                             <li class='nav-item'>
-                                <a href='/companies/create' class='nav-link'>Dodaj Firmę</a>
+                                <a href='/companies/create' class='nav-link'>{{__("Add Companies")}}</a>
                             </li>
                         @endguest
                     </ul>

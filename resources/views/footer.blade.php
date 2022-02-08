@@ -37,7 +37,7 @@
         </div>
         <div style="display: flex;flex-direction:column;margin:10px 0 0 20px">
             <p><span>MOB:</span> {{$employee->mobile}}</p>
-            <a href='mailto:{{$employee->email}}'><span>MAIL:</span> {{$employee->email}}</a>
+            <a href='mailto:{{$employee->email}}'><span>EMAIL:</span> {{$employee->email}}</a>
         </div>
         <div style="display: flex;flex-direction:column;margin:10px 0 0 20px">
             <p>{{$company->company}}</p>
