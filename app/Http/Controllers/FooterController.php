@@ -15,7 +15,7 @@ class FooterController extends Controller
         return view('footer', ['employee' => $employee,'company' => $company[0]]);
     }
     public function image($id){
-        Browsershot::url("http://gen.test/footer/{$id}")->setNodeBinary("C:\\PROGRA~1\\nodejs\\node.exe")->save("stopka{$id}.png");
+        Browsershot::url(route('footer.show',['id'=>$id]))->setNodeBinary(config('mag.node_path'))->save("stopka{$id}.png");
         redirect()->route('home');
         return response()->download("stopka{$id}.png");
     }
