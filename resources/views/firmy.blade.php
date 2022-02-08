@@ -38,14 +38,14 @@
                         <td>{{$company->www}}</td>      
                         <td>
                           <a href="/companies/{{$company->id}}/edit">                                      
-                            <button class='btn btn-sm btn-secondary'>
+                            <button class='btn btn-sm btn-secondary m-2'>
                               {{__("Edit")}}
                             </button>
                           </a>
                           <form action="/companies/{{$company->id}}" method="POST">
                             @csrf
                             @method('delete')                                      
-                            <button class='btn btn-sm btn-danger' onclick="if(!confirm('czy chcesz usunąć')){event.preventDefault()}">
+                            <button class='btn btn-sm btn-danger m-2' onclick="if(!confirm('czy chcesz usunąć')){event.preventDefault()}">
                               {{__("Delete")}}
                             </button>
                           </form>

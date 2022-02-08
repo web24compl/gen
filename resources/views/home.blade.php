@@ -44,26 +44,26 @@
                                     <td>{{$employee->email}}</td>   
                                     <td>
                                       <a href="/footer/{{$employee->id}}" download='stopka {{$employee->name}}'>                            
-                                        <button class='btn btn-sm btn-secondary'>
+                                        <button class='btn btn-sm btn-secondary m-2'>
                                           HTML
                                         </button>
                                       </a>
                                       <a href="/image/{{$employee->id}}">                               
-                                        <button class='btn btn-sm btn-secondary'>
+                                        <button class='btn btn-sm btn-secondary m-2'>
                                           PNG
                                         </button>
                                       </a>
                                     </td>    
                                     <td>
                                       <a href="/employees/{{$employee->id}}/edit">                                      
-                                        <button class='btn btn-sm btn-secondary'>
+                                        <button class='btn btn-sm btn-secondary m-2'>
                                           {{__("Edit")}}
                                         </button>
                                       </a>
                                       <form action="/employees/{{$employee->id}}" method="POST">
                                         @csrf
                                         @method('delete')                                      
-                                        <button class='btn btn-sm btn-danger' onclick="if(!confirm('czy chcesz usunąć')){event.preventDefault()}">
+                                        <button class='btn btn-sm btn-danger m-2' onclick="if(!confirm('czy chcesz usunąć')){event.preventDefault()}">
                                           {{__("Delete")}}
                                         </button>
                                       </form>
