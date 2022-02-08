@@ -41,12 +41,12 @@
         </div>
         <div style="display: flex;flex-direction:column;margin:10px 0 0 20px">
             <p>{{$company->company}}</p>
-            <p><span>UL: </span>{{$company->address}}, {{$company->post_code}}</p>
+            <p><span>UL: </span>{{$company->street}} {{$company->street_number}}, {{$company->post_code}} {{$company->city}}</p>
             <p><span>TEL: </span>{{$company->phone}}, <span>FAX: </span>{{$company->fax}}</p>
         </div>
         <div>
             <hr/>
-            <p style="font-size:0.75rem;margin-left:20px;">{{$company->vat_no}}</p>
+            <p style="font-size:0.75rem;margin-left:20px;">{{$company->nip}}</p>
         </div>
     </div>
     <div style="display: flex;flex-direction:column;text-align:center;">

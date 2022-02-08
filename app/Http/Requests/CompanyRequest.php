@@ -15,11 +15,13 @@ class CompanyRequest extends FormRequest
     {
         return [
             'company' =>['required'],
-            'address' =>['required'],
+            'street' =>['required'],
+            'street_number' =>['required'],
             'post_code' =>['required'],
+            'city' =>['required'],
             'phone' =>['required'],
             'fax' =>['required'],            
-            'vat_no' =>['required'],            
+            'nip' =>['required'],            
             'www' =>['required'],            
         ];
     }

@@ -11,11 +11,13 @@ class CreateCompanyTable extends Migration
         Schema::create('companies', function (Blueprint $table) {
             $table->id();
             $table->string('company')->unique();
-            $table->string('address');
+            $table->string('street');
+            $table->string('street_number');
             $table->string('post_code');
+            $table->string('city');
             $table->string('phone');
             $table->string('fax');
-            $table->string('vat_no');
+            $table->string('nip');
             $table->string('www');
             
             $table->timestamps();

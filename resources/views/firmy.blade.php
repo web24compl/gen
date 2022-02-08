@@ -25,7 +25,7 @@
                             <th scope="col">Nazwa</th>
                             <th scope="col">Telefon</th>
                             <th scope="col">Adres</th>
-                            <th scope="col">Kod Pocztowy</th>
+                            <th scope="col">WWW</th>
                             <th scope="col">=====</th>
                           </tr>
                         </thead>    
@@ -34,8 +34,8 @@
                         <td>{{$loop->iteration}}</td>
                         <td>{{$company->company}}</td>      
                         <td>{{$company->phone}}</td>      
-                        <td>{{$company->address}}</td>      
-                        <td>{{$company->post_code}}</td>      
+                        <td>{{$company->street}} {{$company->street_number}}</td>      
+                        <td>{{$company->www}}</td>      
                         <td>
                           <a href="/companies/{{$company->id}}/edit">                                      
                             <button class='btn btn-secondary'>

@@ -35,7 +35,6 @@
                                 <option value='{{$company->company}}'>{{$company->company}}</option>
                             @endforeach
                           </select>
-                          {{-- <input class="form-control" id="company" name='company' value="{{$employee?->company}}"> --}}
                         </div>
                         <div class="form-group">
                           <label for="position">Stanowisko</label>
@@ -47,7 +46,7 @@
                         </div>
                         <div class="form-group">
                           <label for="mobile">Mobile</label>
-                          <input class="form-control" id="mobile" name='mobile' value="{{$employee?->mobile}}">
+                          <input type="tel" class="form-control" id="mobile" name='mobile' value="{{$employee?->mobile}}">
                         </div>
                         <div class="form-group">
                           <label for="email">E-Mail</label>
