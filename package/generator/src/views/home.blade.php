@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('generator::layouts.app')
 
 @section('content')
 <div class="container">
@@ -60,18 +60,18 @@
                                         </a>
                                       </td>  
                                       <td>
-                                        {{-- <a href="/footer/{{$employee->id}}" download='stopka {{$employee->name}}'>                            
+                                        {{-- <a href="/footer/mobile/{{$employee->id}}/pl" download='stopka {{$employee->name}}'>                            
                                           <button class='btn btn-sm btn-secondary m-2'>HTML PL</button>
-                                        </a>
-                                        <a href="/image/{{$employee->id}}">                               
-                                          <button class='btn btn-sm btn-secondary m-2'>JPG PL</button>
-                                        </a>
-                                        <a href="/footer/{{$employee->id}}" download='stopka {{$employee->name}}'>                            
-                                          <button class='btn btn-sm btn-secondary m-2'>HTML EN</button>
-                                        </a>
-                                        <a href="/image/{{$employee->id}}">                               
-                                          <button class='btn btn-sm btn-secondary m-2'>JPG EN</button>
                                         </a> --}}
+                                        <a href="/image/mobile/{{$employee->id}}/pl">                               
+                                          <button class='btn btn-sm btn-secondary m-2'>PL</button>
+                                        </a>
+                                        {{-- <a href="/footer/mobile/{{$employee->id}}/en" download='stopka {{$employee->name}}'>                            
+                                          <button class='btn btn-sm btn-secondary m-2'>HTML EN</button>
+                                        </a> --}}
+                                        <a href="/image/mobile/{{$employee->id}}/en">                               
+                                          <button class='btn btn-sm btn-secondary m-2'>EN</button>
+                                        </a>
                                       </td>    
                                       <td>
                                         <a href="/employees/{{$employee->id}}/edit">                                      

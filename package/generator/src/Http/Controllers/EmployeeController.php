@@ -1,14 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Gabenn\Generator\Http\Controllers;
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
-use App\Http\Resources\EmployeeResource;
-use App\Http\Requests\EmployeeRequest;
-use App\Models\Company;
-use App\Models\Employee;
-use Illuminate\Http\Request;
+use Gabenn\Generator\Http\Resources\EmployeeResource;
+use Gabenn\Generator\Http\Requests\EmployeeRequest;
+use Gabenn\Generator\Models\Company;
+use Gabenn\Generator\Models\Employee;
 
 class EmployeeController extends Controller
 {
@@ -21,7 +19,7 @@ class EmployeeController extends Controller
     {
         $companies = Company::all();
 
-        return view('form', ['employee' => null, 'companies'=>$companies]);
+        return view('generator::form', ['employee' => null, 'companies'=>$companies]);
     }
 
     public function store(EmployeeRequest $request)
@@ -37,7 +35,7 @@ class EmployeeController extends Controller
 
         $companies = Company::all();
 
-        return view('form', ['employee' => $employee, 'companies'=>$companies]);
+        return view('generator::form', ['employee' => $employee, 'companies'=>$companies]);
     }
 
     public function update(EmployeeRequest $request, Employee $employee)

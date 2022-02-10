@@ -165,6 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Gabenn\Generator\GeneratorServiceProvider::class,
 
         /*
          * Application Service Providers...

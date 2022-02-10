@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Resources;
+namespace Gabenn\Generator\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class CompanyResource extends JsonResource
+class EmployeeResource extends JsonResource
 {
     public function toArray($request)
     {

@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Gabenn\Generator\Http\Controllers;
 
-use App\Http\Requests\CompanyRequest;
-use App\Http\Resources\CompanyResource;
-use App\Models\Company;
-use Illuminate\Http\Request;
+use Gabenn\Generator\Http\Requests\CompanyRequest;
+use Gabenn\Generator\Models\Company;
+use App\Http\Controllers\Controller;
 
 class CompanyController extends Controller
 {
@@ -13,13 +12,13 @@ class CompanyController extends Controller
     {
         $companies = Company::all();
 
-        return view('firmy', ['companies'=>$companies]);   
+        return view('generator::firmy', ['companies'=>$companies]);   
     }
     
     public function create()
     {
         
-        return view('konfigurator', ['company' => null]);
+        return view('generator::konfigurator', ['company' => null]);
     }
 
     public function store(CompanyRequest $request)
@@ -33,12 +32,13 @@ class CompanyController extends Controller
     {
         $company = Company::find($id);
 
-        return view('konfigurator', ['company' => $company]);
+        return view('generator::konfigurator', ['company' => $company]);
     }
 
     public function update(CompanyRequest $request, Company $company)
     {
         $company->update($request->validated());
+        
 
         return redirect()->route('companies.index');
     }

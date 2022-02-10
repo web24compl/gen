@@ -1,0 +1,17 @@
+{
+    "name": "gabenn/generator",
+    "description": "Mail Footer Generator",
+    "authors": [
+        {
+            "name": "Lukasz",
+            "email": "Lukaszcysewski123@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Gabenn\\Generator\\":"/src"
+        }
+    }
+}
