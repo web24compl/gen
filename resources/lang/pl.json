@@ -9,7 +9,7 @@
   "Add Employee":"Dodaj Pracownika",
   "Companies":"Firmy",
   "Add Companies":"Dodaj Firmy",
-
+  
   
   "Name":"Imie i Nazwisko", 
   "Company":"Firma", 
@@ -26,6 +26,7 @@
   "Address":"Adres",
   "Add Company":"Dodaj Firmę",
   "List Of Companies":"Lista Firm",
+  "List Of Employees":"Lista Pracowników",
 
   "Company Name":"Nazwa Firmy",
   "Street":"Ulica",
@@ -35,5 +36,8 @@
 
   "Fax":"Fax",
   "NIP":"NIP",
-  "WWW":"WWW"
+  "WWW":"WWW",
+
+  "Best regards":"Z poważaniem",
+  "ADDRESS":"UL"
 }
