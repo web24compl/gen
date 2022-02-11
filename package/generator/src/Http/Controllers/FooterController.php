@@ -23,7 +23,6 @@ class FooterController extends Controller
         {
             App::setLocale("pl");
         }
-        
         return view('generator::footer', ['employee' => $employee,'company' => $company[0]]);
     }
 
@@ -44,14 +43,14 @@ class FooterController extends Controller
 
     public function desktop_image($id,$lang)
     {
-        Browsershot::url(route('footer.desktop',['id'=>$id,'lang'=>$lang]))->setNodeBinary(config('mag.node_path'))->select('body')->save("stopka{$id}{$lang}.jpg");
-        return response()->download("stopka{$id}{$lang}.jpg")->deleteFileAfterSend(true);
+        Browsershot::url(route('footer.desktop',['id'=>$id,'lang'=>$lang]))->setNodeBinary(config('mag.node_path'))->select('body')->save("stopka{$id}{$lang}.png");
+        return response()->download("stopka{$id}{$lang}.png")->deleteFileAfterSend(true);
     }
 
     public function mobile_image($id,$lang)
     {
-        Browsershot::url(route('footer.mobile',['id'=>$id,'lang'=>$lang]))->setNodeBinary(config('mag.node_path'))->select('body')->save("stopka{$id}{$lang}.jpg");
-        return response()->download("stopka{$id}{$lang}.jpg")->deleteFileAfterSend(true);
+        Browsershot::url(route('footer.mobile',['id'=>$id,'lang'=>$lang]))->setNodeBinary(config('mag.node_path'))->select('body')->save("stopka{$id}{$lang}.png");
+        return response()->download("stopka{$id}{$lang}.png")->deleteFileAfterSend(true);
     }
 
 }

@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-lg-12">
             <div class="card">
                 <div class="card-header">{{__("Companies")}}</div>
 
@@ -18,7 +18,8 @@
                       <button class='btn btn-primary mb-3'>{{__("Add Company")}}</button>  
                     </a>
                     <h3>{{__("List Of Companies")}}</h3>
-                    <table class="table">
+                    <div class="table-responsive-xl">
+                      <table class="table">
                         <thead>
                           <tr>
                             <th scope="col">#</th>
@@ -29,29 +30,31 @@
                             <th scope="col"></th>
                           </tr>
                         </thead>    
-                    @foreach ($companies as $company)
-                    <tr>
-                        <td>{{$loop->iteration}}</td>
-                        <td>{{$company->company}}</td>      
-                        <td>{{$company->phone}}</td>      
-                        <td>{{$company->street}} {{$company->street_number}}</td>      
-                        <td>{{$company->www}}</td>      
-                        <td>
-                          <a href="/companies/{{$company->id}}/edit">                                      
-                            <button class='btn btn-sm btn-secondary m-2'>
-                              {{__("Edit")}}
-                            </button>
-                          </a>
-                          <form action="/companies/{{$company->id}}" method="POST">
-                            @csrf
-                            @method('delete')                                      
-                            <button class='btn btn-sm btn-danger m-2' onclick="if(!confirm('czy chcesz usunąć')){event.preventDefault()}">
-                              {{__("Delete")}}
-                            </button>
-                          </form>
-                        </td>    
-                    </tr>                            
-                @endforeach
+                        @foreach ($companies as $company)
+                        <tr>
+                          <td>{{$loop->iteration}}</td>
+                          <td>{{$company->company}}</td>      
+                          <td>{{$company->phone}}</td>      
+                          <td>{{$company->city}}, {{$company->street}} {{$company->street_number}}</td>      
+                          <td><a href="http://{{$company->www}}" target="_blank">{{$company->www}}</a></td>      
+                          <td>
+                            <a href="/companies/{{$company->id}}/edit">                                      
+                              <button class='btn btn-sm btn-secondary m-2'>
+                                {{__("Edit")}}
+                              </button>
+                            </a>
+                            <form action="/companies/{{$company->id}}" method="POST">
+                              @csrf
+                              @method('delete')                                      
+                              <button class='btn btn-sm btn-danger m-2' onclick="if(!confirm('czy chcesz usunąć')){event.preventDefault()}">
+                                {{__("Delete")}}
+                              </button>
+                            </form>
+                          </td>    
+                        </tr>                            
+                        @endforeach
+                      </table>    
+                    </div>
                 </div>
             </div>
         </div>

@@ -17,7 +17,6 @@ class CompanyController extends Controller
     
     public function create()
     {
-        
         return view('generator::konfigurator', ['company' => null]);
     }
 
@@ -39,13 +38,13 @@ class CompanyController extends Controller
     {
         $company->update($request->validated());
         
-
         return redirect()->route('companies.index');
     }
 
     public function destroy(Company $company)
     {
         $company->delete();
+        
         return redirect()->route('companies.index');
     }
 }

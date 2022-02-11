@@ -29,21 +29,21 @@
                         <input class="form-control" id="company" name='company' value="{{$company?->company}}">
                       </div>
                       <div class="row">
-                        <div class='col-md-10'>
+                        <div class='col-md-9'>
                           <label for="street">{{__("Street")}}</label>
                           <input class="form-control" id="street" name='street' value="{{$company?->street}}">
                         </div>
-                        <div class='col-md-2'>
+                        <div class='col-md-3'>
                           <label for="street_number">{{__("Street Number")}}</label>
                           <input class="form-control" id="street_number" name='street_number' value="{{$company?->street_number}}">
                         </div>
                       </div>
                       <div class="row">
-                        <div class='col-md-3'>
+                        <div class='col-md-4'>
                           <label for="post_code">{{__("Post Code")}}</label>
                           <input class="form-control" id="post_code" name='post_code' value="{{$company?->post_code}}">
                         </div>
-                        <div class='col-md-9'>
+                        <div class='col-md-8'>
                           <label for="city">{{__("City")}}</label>
                           <input class="form-control" id="city" name='city' value="{{$company?->city}}">  
                         </div>

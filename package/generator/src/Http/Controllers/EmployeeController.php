@@ -32,7 +32,6 @@ class EmployeeController extends Controller
     public function edit($id)
     {
         $employee = Employee::find($id);
-
         $companies = Company::all();
 
         return view('generator::form', ['employee' => $employee, 'companies'=>$companies]);
@@ -48,6 +47,7 @@ class EmployeeController extends Controller
     public function destroy(Employee $employee)
     {
         $employee->delete();
+
         return redirect()->route('home');
     }
 }
